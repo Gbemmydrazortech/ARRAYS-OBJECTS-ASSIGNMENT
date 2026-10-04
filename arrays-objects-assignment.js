@@ -94,8 +94,9 @@ function getPassingStudents(students){
 } 
 
 /* Test the function that returns only passing students. */
+const passing = getpassingStudents(studentsWithAverage);
+console.log(passing);
 
-console.log(getPassingStudents(studentsWithAverage));
 
 /* Question 4: Functions & Callbacks */
 
