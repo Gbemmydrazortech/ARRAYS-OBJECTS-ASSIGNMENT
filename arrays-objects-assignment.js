@@ -24,25 +24,25 @@ const students = [
     grades: [71, 72, 70]
   }, 
   
-{
-  id: 4,
-  name: 'Trex frek',
-  age: 29,
-  grades: [66, 59, 60]
-},
+ {
+   id: 4,
+   name: 'Trex Frek',
+   age: 29,
+   grades: [66, 59, 60]
+ },
 
-{
-  id: 5,
-  name: 'Dagbe Abel',
-  age: 25,
-  grades: [60, 62, 58]
-}, 
+ {
+   id: 5,
+   name: 'Dagbe Abel',
+   age: 25,
+   grades: [60, 62, 58]
+ }, 
 
-{
-  id: 6,
-  name: 'Anna Bela',
-  age: 25,
-  grades: [59, 59, 59]
+ {
+   id: 6,
+   name: 'Anna Bela',
+   age: 25,
+   grades: [59, 59, 59]
 }
 ];
 
@@ -51,9 +51,9 @@ const students = [
 /* Calculate the average of a student's grades using reduce(). */
 
 function calculateAverage(grades){
-  const total = grades.reduce((total, grade) => {
+  const total = grades.reduce((sum, grade) => {
   
-    return total + grade;
+    return sum + grade;
     
 },0);
 
@@ -74,7 +74,7 @@ const studentsWithAverage = students.map((student) => {
   
   return {
     ...student, 
-    average:average
+    average
   };
 });
 
@@ -102,10 +102,10 @@ console.log(passing);
 
 /* Use map() to apply the callback function to each student and return a new array. */
 
-function processStudents(students, callBack){
+function processStudents(students, callback){
   
  return students.map((student) => {
- return callBack(student);
+ return callback(student);
  });
 }
 
@@ -129,7 +129,7 @@ let letterGrade = "";
   
   return {
     ...student, 
-    letterGrade:letterGrade
+    letterGrade
   };
 }
 
@@ -146,7 +146,7 @@ function addStatus(student){
   
   return {
     ...student, 
-    status:status
+    status
   };
 }
 
